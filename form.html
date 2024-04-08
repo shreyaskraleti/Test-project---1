@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div>
+        <h1>Login Form:</h1>
+        <form>
+            <h3>
+            <label for="email">Email:<span class="mandatory">*</span></label>
+            <input type="text" name="email" id="email" placeholder="Enter your email id">
+            <span class="dNone" id="Eerr">Please Enter Email</span>
+
+            <label for="password">Password:<span class="mandatory">*</span></label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+            <span class="dNone" id="Perr">Please Enter Password</span>
+
+            <input type="button" name="login" id="login" value="Login";
+            </h3>
+
+        </form>
+        <h4>Forgot Password? <a href="#">Click here</a></h4>
+        <h4>Don't have an Account? <a href="#">Click here</a></h4>
+    </div>
+
+    <script>
+        document.getElementById('login').addEventListener("click",function()) {
+            let Email = document.getElementById('email').value;
+            let pswd = document.getElementById('password').value;
+
+            if(Email="") {
+                document.getElementById('Eerr').style.display = "block";
+
+            } else {
+                document.getElementById('Eerr').style.display = "none";
+
+
+            }
+
+            if(pswd="") {
+                document.getElementById('Eerr').style.display = "block";
+
+            } else {
+                document.getElementById('Eerr').style.display = "none";
+
+
+            }
+
+
+
+
+        }
+
+    </script>
+    
+</body>
+</html>

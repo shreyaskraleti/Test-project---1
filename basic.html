@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>character counter</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Functions Basics</title>
 </head>
-
 <body>
-
-<div class="container">
-    <h2>Real-time Character Counter</h2>
-    <textarea id="input" rows="4" cols="50"> enter text..... </textarea>
-    <p class="character-count">
-    <span>Total Character: <span id="total" style="color: blue;">0</span></span>
-    <span>Remaining: <span id="remaining" style="color: red;">100</span></span>
-    </p>
-</div>
-
     <script>
-        const input = document.getElementById('input');
-        const totalChars = document.getElementById('total');
-        const remainingChars = document.getElementById('remaining');
-        const maxCharacters = 100;
-       
 
-        input.addEventListener('input', function() {
-            const textLength = this.value.length;
-            const remaining = maxCharacters - textLength;
-            totalChars.textContent = textLength;
-            remainingChars.textContent = remaining;
-            if (remaining < 0) {
-                remainingChars.classList.add('red');
-            } else {
-                remainingChars.classList.remove('red');
-            }
-        });
+        // named function or basic function - with function name
 
-    
+        function sum(num1,num2) {
+            var result = num1+num2;
+            return result;  
+        
+        }
+
+        console.log(sum(2,3));
+        document.write(sum(10,20));
+        document.write("<br>result of 50,20 is:" + sum(50,20));
+
+        // function expression - assigning to a variable
+
+        var add = function sum(num1,num2) {
+            var result = num1+num2;
+            return result;
+        }
+
+        console.log(add(2,5));
+        console.log(add(10,30));
+
+        // anonymous function - without function name
+
+        var sum = function(num1,num2) {
+            var result = num1+num2;
+            return result;
+        }
+
+        console.log(sum(2,4));
+
+
+
+
+
+
     </script>
-
-
     
 </body>
 </html>
