@@ -19,20 +19,23 @@
             <input type="password" name="password" id="password" placeholder="Enter your password">
             <span class="dNone" id="Perr">Please Enter Password</span>
 
-            <input type="button" name="login" id="login" value="Login";
-            </h3>
+            <input type="button" name="login" id="login" value="Login Now";
 
+            </h3>
         </form>
+
         <h4>Forgot Password? <a href="#">Click here</a></h4>
         <h4>Don't have an Account? <a href="#">Click here</a></h4>
     </div>
 
     <script>
-        document.getElementById('login').addEventListener("click",function()) {
-            let Email = document.getElementById('email').value;
+
+        document.getElementById('login').addEventListener("click",function() {
+
+            let Eml = document.getElementById('email').value;
             let pswd = document.getElementById('password').value;
 
-            if(Email="") {
+            if(Eml=="") {
                 document.getElementById('Eerr').style.display = "block";
 
             } else {
@@ -41,19 +44,23 @@
 
             }
 
-            if(pswd="") {
-                document.getElementById('Eerr').style.display = "block";
+            if(pswd=="") {
+                document.getElementById('Perr').style.display = "block";
 
             } else {
-                document.getElementById('Eerr').style.display = "none";
+                document.getElementById('Perr').style.display = "none";
 
 
+            }
+
+            if (Eml!="" && pswd!="") {
+                alert("user is logged in successfully!!!");
             }
 
 
 
 
-        }
+        });
 
     </script>
     

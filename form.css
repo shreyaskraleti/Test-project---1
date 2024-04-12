@@ -28,4 +28,5 @@ form label, input {
 
 .dNone {
     color: red;
+    display: none;
 }
